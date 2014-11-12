@@ -1,5 +1,5 @@
+import sbt.Keys._
 import sbt._
-import Keys._
 
 object Build extends Build {
 
@@ -10,6 +10,10 @@ object Build extends Build {
 
   initialCommands in console := "import scalaz._, Scalaz._"
 
+  resolvers := Seq(
+    "Cloudera" at "https://repository.cloudera.com/artifactory/cloudera-repos"
+  ) ++ resolvers.value
+
   lazy val root = Project(id = "root", base = file(".")).settings(
     name := "scala-playground",
     version := "1.0",
@@ -18,6 +22,7 @@ object Build extends Build {
       "com.typesafe.akka" %% "akka-actor" % akkaVersion,
       "com.typesafe.akka" %% "akka-cluster" % akkaVersion,
       "com.typesafe.akka" %% "akka-persistence-experimental" % "2.3.0-RC2",
+      "org.apache.hive" % "hive-jdbc" % "0.12.0",
       "org.scalaz" %% "scalaz-core" % scalazVersion,
       "org.scalaz" %% "scalaz-effect" % scalazVersion,
       "org.scalaz" %% "scalaz-typelevel" % scalazVersion,
