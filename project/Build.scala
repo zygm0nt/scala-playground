@@ -26,8 +26,11 @@ object Build extends Build {
       "org.scalaz" %% "scalaz-core" % scalazVersion,
       "org.scalaz" %% "scalaz-effect" % scalazVersion,
       "org.scalaz" %% "scalaz-typelevel" % scalazVersion,
-      "org.scalaz" %% "scalaz-scalacheck-binding" % scalazVersion % "test"
+      "com.chuusai" % "shapeless_2.10.4" % "2.0.0",
+      "org.scalaz" %% "scalaz-scalacheck-binding" % scalazVersion % "test",
+      "org.scalacheck" %% "scalacheck" % "1.12.0" % "test"
     )
 
+  /* scalacheck */
   )
 }
