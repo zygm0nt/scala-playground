@@ -17,11 +17,12 @@ object Build extends Build {
   lazy val root = Project(id = "root", base = file(".")).settings(
     name := "scala-playground",
     version := "1.0",
+    scalaVersion := "2.11.5",
     libraryDependencies ++= Seq(
       "org.specs2" %% "specs2" % "2.3.13",
       "com.typesafe.akka" %% "akka-actor" % akkaVersion,
       "com.typesafe.akka" %% "akka-cluster" % akkaVersion,
-      "com.typesafe.akka" %% "akka-persistence-experimental" % "2.3.0-RC2",
+      "com.typesafe.akka" %% "akka-persistence-experimental" % akkaVersion,
       "org.apache.hive" % "hive-jdbc" % "0.12.0",
       "org.scalaz" %% "scalaz-core" % scalazVersion,
       "org.scalaz" %% "scalaz-effect" % scalazVersion,

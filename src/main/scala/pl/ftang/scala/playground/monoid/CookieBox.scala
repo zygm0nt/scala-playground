@@ -14,6 +14,7 @@ object CookieBox {
   }
 
   def howMany[A : Monoid](gm: A, gp: A): A = implicitly[Monoid[A]].append(gm, gp)
+  //def howMany[A : Monoid](gm: A, gp: A): A = gm append gp
 
   def main(args: Array[String]) = {
     println("combined cookie box: " + howMany(CookieBox(1), CookieBox(2)))
