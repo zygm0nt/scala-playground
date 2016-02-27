@@ -162,6 +162,7 @@ object HelloWorld_v4 extends IOApplication_v4 {
   }
 }
 
+/*
 object HelloWorld extends IOApplication {
   import IOAction._
   import RTConsole._
@@ -197,6 +198,7 @@ object HelloWorld extends IOApplication {
       loop
   }
 }
+*/
 
 
 

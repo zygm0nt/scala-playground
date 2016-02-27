@@ -3,7 +3,7 @@ import sbt._
 
 object Build extends Build {
 
-  val scalazVersion = "7.0.6"
+  val scalazVersion = "7.2.0"
   val akkaVersion = "2.3.4"
 
   scalacOptions += "-feature"
@@ -26,8 +26,9 @@ object Build extends Build {
       "org.apache.hive" % "hive-jdbc" % "0.12.0",
       "org.scalaz" %% "scalaz-core" % scalazVersion,
       "org.scalaz" %% "scalaz-effect" % scalazVersion,
-      "org.scalaz" %% "scalaz-typelevel" % scalazVersion,
-      "com.chuusai" % "shapeless_2.10.4" % "2.0.0",
+      //"org.scalaz" %% "scalaz-typelevel" % scalazVersion,
+      "com.chuusai" %% "shapeless" % "2.2.5",
+      "org.typelevel" %% "cats" % "0.4.1",
       "org.scalaz" %% "scalaz-scalacheck-binding" % scalazVersion % "test",
       "org.scalacheck" %% "scalacheck" % "1.12.0" % "test"
     )
